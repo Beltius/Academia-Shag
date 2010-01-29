@@ -9,13 +9,10 @@ using namespace std;
 int main()
 {   
     int sum=0;
-    srand((unsigned)time(NULL)); 
-	const int row=3; 
-	const int col=4;
-	int mr[row][col]; 
-	for(int i=0; i<row; i++)
+   	int mr[3][4]; 
+	for(int i=0; i<3; i++)
 	{
-		for(int j=0; j<col;j++)
+		for(int j=0; j<4;j++)
 		{
 			mr[i][j]=rand()%10;
 			
