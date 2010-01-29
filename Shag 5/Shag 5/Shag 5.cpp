@@ -1,6 +1,5 @@
 ﻿#include "stdafx.h"
 #include <iostream>
-#include <math.h>
 #include <iomanip>
 #include <locale.h>
 using namespace std;
@@ -69,7 +68,7 @@ Start:
 				cout << '*';
 				for(j=1; j<=(a-2); j++)
 						{
-							cout << '/';
+							cout << ' ';
 						}
 				cout << '*';
 				cout << endl;
