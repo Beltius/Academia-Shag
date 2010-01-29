@@ -9,7 +9,6 @@ int main()
 	system ("color 0a");
 	int a, b, t, j, zadan, i;
 	setlocale (LC_ALL, "rus");
-	const int week=7, days=31;
 Start:
 	cout << "1. Создать программу, которая выводит на экран простые числа в диапазоне от 2 до 1000." <<endl;
 	cout << "(Число называется простым, если оно делится только на 1 и на само себя без остатка; " <<endl;
@@ -25,6 +24,7 @@ Start:
 	cout << "*********************" <<endl;
 	cout << "ширина и высота фигуры задаются пользователем с клавиатуры." <<endl;
 	cout << "3. При помощи цикла показать на экран календарь текущего месяца." <<endl;
+	cout << "4. Выход." <<endl;
 	cout << "Введите номер задания : "<<endl;
 	cin >> zadan;
 	switch(zadan)
@@ -82,25 +82,12 @@ Start:
 		goto Start;
 		break;
 	case 3:
-	cout<<"Пн"<<setw(5)<<"Вт"<<setw(5)<<"Ср"<<setw(5)<<"Чт"<<setw(5)<<"Пт"<<setw(5)<<"Сб"<<setw(5)<<"Вс"<<setw(5)<<endl;
-	for(int i=0; i<=week; ++i)
+	cout<<"Пн"<<setw(3)<<"Вт"<<setw(3)<<"Ср"<<setw(3)<<"Чт"<<setw(3)<<"Пт"<<setw(3)<<"Сб"<<setw(3)<<"Вс"<<setw(3)<<endl;
+	for (int i=1; i<30;)
 	{
-		cout<<"_____";
-	}
-	for(int i=0; i<5; ++i)
-	{
-		cout<<setw(5);
-	}
-	for(int i=1; i<=3; ++i)
-	{
-		cout<<i<<setw(5);
-	}
-	cout<<endl;
-	for (int i=4; i<days; i+7)
-	{
-		for(int j=1; j<=week; ++j, ++i)
+		for(int j=1; j<=7 && i<=31; j++, i++)
 		{
-			cout<<i<<setw(5);
+			cout<<i<<setw(3);
 		}
 		cout<<endl;
 	}
